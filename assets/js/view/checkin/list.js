@@ -45,7 +45,8 @@ define(
                         //boucle pour les marker sur la map
                         for (var i = 0; i < checkins.models.length; i++) {
                             //console.log(i);
-                            var content = "<a href=\"#detailsCheckins/"+i+"\">Checkin numero "+i+"</a>";
+                            var id = checkins.models[i].attributes.id;
+                            var content = "<a href=\"#detailsCheckins/"+id+"\">Checkin numero "+id+"</a>";
                             var infowindow = new google.maps.InfoWindow();
 
                             var pos = new google.maps.LatLng(parseFloat(checkins.models[i].attributes.lat),parseFloat(checkins.models[i].attributes.lng));
