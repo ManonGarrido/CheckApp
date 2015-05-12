@@ -1,0 +1,6 @@
+	<div id="map" style="height :400px;"></div>
+	<% _.each(checkInList, function(checkin){ %>
+		<a href="#detailsCheckins/<%= checkin.get('id')%>" class="list-group-item">
+			checkin <b><%= checkin.get('id') %></b>
+		</a>
+	<% }); %>
